@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('deploy') {
+      steps {
+        bat 'xcopy "C:\\Program Files (x86)\\Jenkins\\workspace\\java-tomcat-maven-example_master\\target" "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps"'
+      }
+    }
+
   }
 }
